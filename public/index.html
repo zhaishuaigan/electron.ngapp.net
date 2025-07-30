@@ -2,206 +2,204 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electron打包工具</title>
-    <link rel="icon" href="favicon.ico" />
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Electron打包工具</title>
+	<link rel="icon" href="favicon.ico" />
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+			background-color: #121212;
+			color: #ffffff;
+			margin: 0;
+			padding: 0;
+			line-height: 1.6;
+		}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
 
-        header {
-            text-align: center;
-            padding: 50px 0;
-            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-        }
+		header {
+			text-align: center;
+			padding: 50px 0;
+			background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+		}
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            /* text-transform: uppercase; */
-            letter-spacing: 2px;
-        }
+		h1 {
+			font-size: 3em;
+			margin-bottom: 20px;
+			/* text-transform: uppercase; */
+			letter-spacing: 2px;
+		}
 
-        .tagline {
-            font-size: 1.2em;
-            color: #bb86fc;
-        }
+		.tagline {
+			font-size: 1.2em;
+			color: #bb86fc;
+		}
 
-        .screenshot {
-            text-align: center;
-            margin: 50px 0;
-        }
+		.screenshot {
+			text-align: center;
+			margin: 50px 0;
+		}
 
-        .screenshot iframe {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 16/9;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
-        }
+		.screenshot iframe {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16/9;
+			border-radius: 10px;
+			box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
+		}
 
-        .box {
-            display: flex;
-        }
+		.box {
+			display: flex;
+		}
 
-        .features,
-        .usage {
-            background-color: #1e1e1e;
-            padding: 30px;
-            margin: 30px 0;
-            border-radius: 10px;
-            margin: 10px;
-            flex: auto;
-        }
-
-
-
-        h2 {
-            color: #03dac6;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        li:before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: #bb86fc;
-        }
-
-        .download {
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #bb86fc;
-            color: #121212;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            margin: 5px;
-        }
-
-        .btn:hover {
-            background-color: #03dac6;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(3, 218, 198, 0.3);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1a1a1a;
-            color: #888;
-        }
+		.features,
+		.usage {
+			background-color: #1e1e1e;
+			padding: 30px;
+			margin: 30px 0;
+			border-radius: 10px;
+			margin: 10px;
+			flex: auto;
+		}
 
 
-        @media screen and (max-width: 900px) {
-            header {
-                text-align: center;
-                padding: 10px 0;
-                background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-            }
 
-            h1 {
-                font-size: 1.5em;
-                margin-bottom: 10px;
-                /* text-transform: uppercase; */
-                letter-spacing: 2px;
-            }
+		h2 {
+			color: #03dac6;
+			margin-bottom: 20px;
+		}
 
-            .box {
-                display: flex;
-                flex-direction: column;
-            }
+		ul {
+			list-style-type: none;
+			padding-left: 0;
+		}
 
-            .features,
-            .usage {
-                margin: 10px 0px;
-            }
-        }
-    </style>
+		li {
+			margin-bottom: 10px;
+			position: relative;
+			padding-left: 25px;
+		}
+
+		li:before {
+			content: '▹';
+			position: absolute;
+			left: 0;
+			color: #bb86fc;
+		}
+
+		.download {
+			text-align: center;
+			margin: 50px 0;
+		}
+
+		.btn {
+			display: inline-block;
+			background-color: #bb86fc;
+			color: #121212;
+			padding: 15px 30px;
+			text-decoration: none;
+			font-weight: bold;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+			margin: 5px;
+		}
+
+		.btn:hover {
+			background-color: #03dac6;
+			transform: translateY(-3px);
+			box-shadow: 0 5px 15px rgba(3, 218, 198, 0.3);
+		}
+
+		footer {
+			text-align: center;
+			padding: 20px;
+			background-color: #1a1a1a;
+			color: #888;
+		}
+
+
+		@media screen and (max-width: 900px) {
+			header {
+				text-align: center;
+				padding: 10px 0;
+				background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+			}
+
+			h1 {
+				font-size: 1.5em;
+				margin-bottom: 10px;
+				/* text-transform: uppercase; */
+				letter-spacing: 2px;
+			}
+
+			.box {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.features,
+			.usage {
+				margin: 10px 0px;
+			}
+		}
+	</style>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>Electron打包工具</h1>
-            <p class="tagline">Electron的离线打包工具</p>
-            <section class="download">
-                <a href="./download/Electron打包工具_2025-07-30.zip" class="btn">点击下载</a>
-                <a href="https://github.com/zhaishuaigan/ElectronPackage" target="_blank" class="btn">查看源码 github</a>
-            </section>
-        </div>
-    </header>
+	<header>
+		<div class="container">
+			<h1>Electron打包工具</h1>
+			<p class="tagline">Electron的离线打包工具</p>
+			<section class="download">
+				<a href="./download/Electron打包工具_2025-07-30.zip" class="btn">点击下载</a>
+				<a href="https://github.com/zhaishuaigan/ElectronPackage" target="_blank" class="btn">查看源码 github</a>
+			</section>
+		</div>
+	</header>
 
-    <main class="container">
+	<main class="container">
 
 
-        <div class="box">
-            <section class="features">
-                <h2>主要功能</h2>
-                <ul>
-                    <li>可视化操作</li>
-                    <li>离线打包</li>
-                    <li>图标修改</li>
-                    <li>暂不支持npm包</li>
-                    <li>目前仅支持windows 11 64位版本</li>
-                </ul>
-            </section>
+		<div class="box">
+			<section class="features">
+				<h2>主要功能</h2>
+				<ul>
+					<li>可视化操作</li>
+					<li>离线打包</li>
+					<li>图标修改</li>
+					<li>暂不支持npm包</li>
+					<li>目前仅支持windows 11 64位版本</li>
+				</ul>
+			</section>
 
-            <section class="usage">
-                <h2>如何使用?</h2>
-                <ul>
-                    <li>1. 下载并解压Electron打包工具</li>
-                    <li>2. 运行Electron打包工具</li>
-                    <li>3. 选择 [项目目录]</li>
-                    <li>4. 设置 [程序文件名]</li>
-                    <li>5. 选择 [程序图标]</li>
-                    <li>6. 选择 [输出目录]</li>
-                    <li>7. 点击 [开始打包] 按钮, 即可将项目打包到输出目录</li>
-                    <li>8. 手动将打包好的目录压缩一下, 就完成了!</li>
-                </ul>
-            </section>
-        </div>
-        <section class="screenshot">
-            <!-- <iframe
-                src="//player.bilibili.com/player.html?isOutside=true&aid=114108338867818&bvid=BV1cJ94YWEmx&cid=28699854556&p=1"
-                scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe> -->
-        </section>
+			<section class="usage">
+				<h2>如何使用?</h2>
+				<ul>
+					<li>1. 下载并解压Electron打包工具</li>
+					<li>2. 运行Electron打包工具</li>
+					<li>3. 选择 [项目目录]</li>
+					<li>4. 设置 [程序文件名]</li>
+					<li>5. 选择 [程序图标]</li>
+					<li>6. 选择 [输出目录]</li>
+					<li>7. 点击 [开始打包] 按钮, 即可将项目打包到输出目录</li>
+					<li>8. 手动将打包好的目录压缩一下, 就完成了!</li>
+				</ul>
+			</section>
+		</div>
+		<section class="screenshot">
+			<img src="./images/ElectronPackage.png" alt="">
+		</section>
 
-    </main>
+	</main>
 
-    <footer>
-        <p>&copy; 2025 electron.ngapp.net</p>
-    </footer>
+	<footer>
+		<p>&copy; 2025 electron.ngapp.net</p>
+	</footer>
 </body>
 
 </html>
