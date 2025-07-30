@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espruino 固件下载助手</title>
+    <title>Electron打包工具</title>
     <link rel="icon" href="/assets/images/favicon.ico" />
     <style>
         body {
@@ -157,7 +157,7 @@
             <p class="tagline">Electron的离线打包工具</p>
             <section class="download">
                 <a href="./download/Electron打包工具_2025-07-30.zip" class="btn">点击下载</a>
-                <a href="https://github.com/espjs/gui" target="_blank" class="btn">查看源码 github</a>
+                <a href="https://github.com/zhaishuaigan/ElectronPackage" target="_blank" class="btn">查看源码 github</a>
             </section>
         </div>
     </header>
@@ -173,33 +173,34 @@
                     <li>离线打包</li>
                     <li>图标修改</li>
                     <li>暂不支持npm包</li>
+                    <li>目前仅支持windows 11 64位版本</li>
                 </ul>
             </section>
 
             <section class="usage">
                 <h2>如何使用?</h2>
                 <ul>
-                    <li>1. 将开发板链接到电脑</li>
-                    <li>2. 在助手上选中开发板的串口</li>
-                    <li>3. 选中开发板类型</li>
-                    <li>4. 点击 [烧录固件] 按钮 即可烧录固件</li>
-                    <li>5. 重启设备</li>
-                    <li>6. 点击 [选择目录] 按钮选择自己的项目</li>
-                    <li>7. 点击 [写入设备] 按钮, 即可将项目代码全部写入设备</li>
-                    <li>8. 重启设备, 即可在设备上运行项目代码</li>
+                    <li>1. 下载并解压Electron打包工具</li>
+                    <li>2. 运行Electron打包工具</li>
+                    <li>3. 选择 [项目目录]</li>
+                    <li>4. 设置 [程序文件名]</li>
+                    <li>5. 选择 [程序图标]</li>
+                    <li>6. 选择 [输出目录]</li>
+                    <li>7. 点击 [开始打包] 按钮, 即可将项目打包到输出目录</li>
+                    <li>8. 手动将打包好的目录压缩一下, 就完成了!</li>
                 </ul>
             </section>
         </div>
         <section class="screenshot">
-            <iframe
+            <!-- <iframe
                 src="//player.bilibili.com/player.html?isOutside=true&aid=114108338867818&bvid=BV1cJ94YWEmx&cid=28699854556&p=1"
-                scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe> -->
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 espjs.cn</p>
+        <p>&copy; 2025 electron.ngapp.net</p>
     </footer>
 </body>
 
